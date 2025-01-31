@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Khadka</title>
+    <style>
+        body {
+            background-color: #b7b7e7;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #dark{
+            background-color:black;
+            color: red;
+            font-family: 'Comic Sans MS';
+            font-size: 1.25rem;
+        }
+        
+        #light{
+            background-color: wheat;
+            color: navy;
+            font-family: 'Calibri';
+            font-style: italic;
+            font-size: 1.25rem;
+        }
+
+        #default{
+            background-color: purple;
+            color: black;
+            font-style: italic;
+            font-size: 1.25rem;
+}
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .photo-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .photo {
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            display: block;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #e74c3c;
+        }
+
+        h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .box {
+            width: 350px;
+            height: 500px;
+            padding: 25px;
+            margin: 20px auto;
+            border: 5px solid rgb(0, 0, 0);
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            margin-bottom: 16px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #e74c3c;
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            border: 5px solid rgb(0, 0, 0);
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            border: 5px solid black;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+        <h1 align="center"> Please Select a Theme! </h1>
+    
+        <button id="light" onclick="changeTheme('lgt')"> Light Theme </button>
+        <button id="dark" onclick="changeTheme('drk')"> Dark Theme </button>
+        <button id="default" onclick="changeTheme('def')"> Default Theme </button>
+        <script> function changeTheme(theme){
+            let body = document.querySelector('body');
+            let title = document.querySelector('h1');
+        
+            
+        
+            if( theme == 'drk' ){
+                body.style.backgroundColor = 'black';
+                body.style.color = 'red';
+                title.style.fontFamily = 'Comic Sans MS';
+            }
+            else if(theme == 'lgt'){
+                body.style.backgroundColor = 'wheat';
+                body.style.color = 'navy';
+                title.style.fontFamily = 'Calibri';
+                 }
+            else { 
+                body.style.backgroundColor = 'purple';
+                body.style.color = 'black';
+                
+            }     
+          }
+        </script>
+    <div class="section">
+        <h1>Personal Info 
+            
+        </h1>
+        <p><img src="084A2212.JPG" alt="my photo" width="150" height="275" align="right"></p>
+        <p><b>Name:</b> Abhishek Khadka</p>
+        <p><b>Student Id:</b> 23058941</p>
+        <p><b>Birthplace:</b> Nuwakot</p>
+        <p><b>Age:</b> 20</p>
+        <p><b>Gender:</b> Male</p>
+        <p><b>Contact:</b> 437-985-4102</p>
+    </div>
+
+    <div class="section">
+        <h2>Some of My Hobbies</h2>
+        <div class="photo-gallery">
+            <div class="photo">
+                <img src="music.jpg" alt="Photo 1" width="150" height="275">
+                <a href="https://open.spotify.com/playlist/77GjwNjVm1EIAataYIYZ5v">Listening to Music</a>
+            </div>
+            <div class="photo">
+                <img src="cooking.jpg" alt="Photo 2" width="150" height="275">
+                <a href="https://www.youtube.com/@YummyFoodWorld">Cooking</a>
+            </div>
+            <div class="photo">
+                <img src="hike.jpg" alt="Photo 3" width="150" height="275">
+                <a href="https://www.alltrails.com/canada/ontario/toronto">Hiking</a>
+            </div>
+            <div class="photo">
+                <img src="movies.jpg" alt="Photo 4" width="150" height="275">
+                <a href="https://www.netflix.com/ca/browse/genre/1365">Watching Movies</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Map of My Birthplace</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28203.847195774477!2d85.1294715566524!3d27.917899004279327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ead96bc6ffd0c1%3A0x8c4399683b13b416!2sNuwakot%2C%20Bidur%2044900%2C%20Nepal!5e0!3m2!1sen!2sca!4v1696987688730!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="section">
+        <h2>Svg Inline Image</h2>
+        <svg version="1.1" baseProfile="full" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1000%" height="100%" fill="black"></rect>
+            <circle cx="150" cy="100" r="90" fill="purple"></circle>
+        </svg>
+    </div>
+
+    <div class="section">
+        <h2>Weather</h2>
+        <iframe src="https://www.meteoblue.com/en/weather/widget/daily/toronto_canada_6167865?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&layout=light" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 100%; max-width: 400px; height: 420px; margin: 0 auto;"></iframe>
+        <div>
+            <a href="https://www.meteoblue.com/en/weather/week/toronto_canada_6167865?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener"></a>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Horoscope</h2>
+        <iframe src="https://www.eastrolog.com/ws/horoscope/v30hz48aL.php" style="width: 1200pxn;;height: 300px;" align="center"></iframe>
+        <div>
+            <a href="https://www.meteoblue.com/en/weather/week/toronto_canada_6167865?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener"></a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>My favorite song</h2>
+        <audio src="Ed Sheeran  Justin Bieber - I Dont Care [Official Video].mp3" id="my_audio" controls="control"></audio>
+        <br>
+        <button id="my_control">Play</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var myAudioTag = document.getElementById("my_audio");
+            var myControls = document.getElementById("my_control");
+    
+            function switchState() {
+                if (myAudioTag.paused == true) {
+                    myAudioTag.play();
+                    myControls.innerHTML = "Pause";
+                }
+                else {
+                    myAudioTag.pause();
+                    myControls.innerHTML = "Play";
+                }
+            }
+    
+            // Button Click Event
+            myControls.addEventListener('click', function () {
+                switchState();
+            }, false);
+        });
+    </script>
+
+<div class="section">
+    <h2>Places that I will like to visit</h2>
+    <div id="photo-slider-container">
+        <div id="photo-slider">
+            <div class="photo-slide">
+                <img src="paris.jpg" alt="Photo 1">
+                <a href="https://www.cometoparis.com/paris-guide/what-to-do-in-paris-s938" align="center" >Paris</a>
+                
+            </div>
+            <div class="photo-slide">
+                <img src="new york.webp" alt="Photo 2">
+                <a href="https://www.exp1.com/blog/12-attractions-must-not-miss-nyc/" align="center" >New York</a>
+                
+            </div>
+            <div class="photo-slide">
+                <img src="switzerland.webp" alt="Photo 3">
+                <a href="https://travel.usnews.com/rankings/best-places-to-visit-in-switzerland/" align="center" >Switzerland</a>
+                <p></p>
+            </div>
+            <div class="photo-slide">
+                <img src="korea.jpeg" alt="Photo 4">
+                <a href="https://traveltriangle.com/blog/places-to-visit-in-south-korea/" align="center" >South Korea</a>
+            </div>
+            <div class="photo-slide">
+                <img src="japan.jpg" alt="Photo 5">
+                <a href="https://www.neverendingvoyage.com/best-places-to-visit-in-japan/" align="center" >Japan</a>
+                
+            </div>
+            <div class="photo-slide">
+                <img src="maldives.jpg" alt="Photo 6">
+                <a href="https://www.thecrazytourist.com/15-best-places-visit-maldives/" align="center" >Maldives</a>
+                
+            </div>
+        </div>
+        <button id="prev-photo" onclick="prevPhotoSlide()">❮</button>
+        <button id="next-photo" onclick="nextPhotoSlide()">❯</button>
+    </div>
+</div>
+
+<script>
+    let photoSlideIndex = 0;
+
+    function showPhotoSlide(index) {
+        const photoSlider = document.getElementById('photo-slider');
+        const photoSlides = document.getElementsByClassName('photo-slide');
+        if (index >= photoSlides.length) {
+            photoSlideIndex = 0;
+        } else if (index < 0) {
+            photoSlideIndex = photoSlides.length - 1;
+        } else {
+            photoSlideIndex = index;
+        }
+        for (let i = 0; i < photoSlides.length; i++) {
+            photoSlides[i].style.display = 'none';
+        }
+        photoSlides[photoSlideIndex].style.display = 'block';
+    }
+
+    function nextPhotoSlide() {
+        showPhotoSlide(photoSlideIndex + 1);
+    }
+
+    function prevPhotoSlide() {
+        showPhotoSlide(photoSlideIndex - 1);
+    }
+
+    // Initial display
+    showPhotoSlide(photoSlideIndex);
+</script>
+
+
+    <div class="section">
+        <h1>Hiring Sales Associate</h1>
+        <form action="#" method="post">
+            <!-- Legal Name -->
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+            <br>
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+            <br>
+    
+            <!-- Address -->
+            <label for="address_line1">Address Line 1:</label>
+            <input type="text" id="address_line1" name="address_line1" placeholder="Address" required>
+            <br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="City" required>
+            <br>
+            <label for="province">Province:</label>
+            <input type="text" id="province" name="province" placeholder="Province">
+            <br>
+            <label for="postal_code">Postal Code:</label>
+            <input type="text" id="postal_code" name="postal_code" placeholder="Postal code" required>
+            <br>
+    
+            <!-- Email Address -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <br>
+    
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <br>
+    
+            <!-- Resume Upload -->
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+            <br> <br>
+    
+            <!-- Eligibility to Work in Canada -->
+            <label for="eligible_to_work">Are you legally eligible to work in Canada?</label>
+            <select id="eligible_to_work" name="eligible_to_work" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+
+             <!-- Gender Confirmation -->
+            <label for="gender">Gender:</label>
+            <span style="display: inline-block;">
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+            </span>
+            <span style="display: inline-block;">
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            </span>
+            <span style="display: inline-block;">
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            </span>
+            <br>
+    
+            <!-- Age Confirmation -->
+            <label for="age_confirmation">At the time of this application, are you 18 years of age or older?</label>
+            <select id="age_confirmation" name="age_confirmation" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+    
+            <!-- Criminal Record Inquiry -->
+            <label for="criminal_record">Have you ever been convicted of an offense for which no pardon has been granted or a record of suspension has been ordered?</label>
+            <select id="criminal_record" name="criminal_record" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br>
+            <br>
+            
+    
+            <button type="submit">Submit form </button>
+            <button type="reset"> Reset </button>
+        </form>
+    </div>
+
+    <script>
+        window.onload = function() {
+            
+        }
+    </script>
+</body>
+</html>
